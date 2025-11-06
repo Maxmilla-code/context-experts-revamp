@@ -8,14 +8,14 @@ import { siteConfig } from '@/config/site';
 
 export default function ContactMapSection() {
   const [loaded, setLoaded] = useState(false);
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(siteConfig.contact.address)}&output=embed`;
+  const mapSrc = 'https://maps.app.goo.gl/zXeqTjrAWGY8GubT8';
   return (
     <section className="py-16" aria-labelledby="contact-title">
       <Container>
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <h2 id="contact-title" className="text-2xl md:text-3xl font-semibold text-neutral-900">Get in Touch</h2>
-            <p className="mt-2 text-neutral-600">Finance House Building, 2nd Floor, Room 10, Nairobi.</p>
+            <p className="mt-2 text-neutral-600">Finance House Building, 2nd Floor, Room 10, Ruiru.</p>
             <div className="mt-4 flex flex-col gap-2 text-neutral-700">
               {siteConfig.contact.phones.map((p) => (
                 <a key={p} href={`tel:${p.replace(/\s+/g,'')}`} className="text-primary-600 hover:underline">{p}</a>

@@ -11,9 +11,9 @@ export default function TestimonialCard({ quote, author, role, rating = 5 }: { q
           <AiFillStar key={i} />
         ))}
       </div>
-      <p className="mt-3 text-neutral-700">“{quote}”</p>
-      <div className="mt-4 flex items-center gap-3">
-        <Avatar name={author} size={36} />
+      <p className="mt-3 text-neutral-800">“{quote}”</p>
+      <div className="mt-6 flex items-center gap-5">
+        <Avatar name={author} size={40} />
         <div>
           <div className="font-medium text-neutral-900">{author}</div>
           <div className="text-sm text-neutral-500">{role}</div>

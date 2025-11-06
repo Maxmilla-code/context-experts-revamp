@@ -4,6 +4,6 @@ export const mainNav: NavItem[] = [
   { label: 'Home', href: '/' },
   { label: 'Testimonials', href: '/testimonials' },
   { label: 'Attachment', href: '/attachment' },
-  { label: 'Pricing', href: '/pricing' },
+  { label: 'Pricing', href: '/services' },
   { label: 'Gallery', href: '/gallery' },
 ];

@@ -1,5 +1,11 @@
 import { cn } from '@/lib/utils';
 
-export default function Container({ className, children }: { className?: string; children: React.ReactNode }) {
-  return <div className={cn('container-px mx-auto w-full', className)}>{children}</div>;
+type ContainerProps = {
+  className?: string;
+  children: React.ReactNode;
+  noPadding?: boolean;
+};
+
+export default function Container({ className, children, noPadding }: ContainerProps) {
+  return <div className={cn(noPadding ? '' : 'container-px', 'mx-auto w-full', className)}>{children}</div>;
 }

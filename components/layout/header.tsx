@@ -16,9 +16,8 @@ export default function Header() {
         </Container>
       </div>
       <Container className="flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 font-semibold text-neutral-900">
-          <img src="/icons/logo.svg" alt="Logo" className="h-6 w-6" />
-<span>Context Expert Agencies Limited</span>
+        <Link href="/" className="flex items-center">
+          <img src="/images/context-logo.png" alt="Logo" className="h-8 w-auto md:h-9" />
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           {mainNav.map((item) => (

@@ -1,1 +1,0 @@
-This directory contains the services listing and dynamic service detail pages as per the architecture blueprint.

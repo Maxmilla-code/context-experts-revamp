@@ -11,9 +11,12 @@ export type TestimonialItem = {
   role: string;
   company: string;
   photo?: string;
-  challenge: string;
-  solution: string;
-  result: string;
+  // Either provide a single blurb or the full challenge/solution/result triplet
+  blurb?: string;
+  videoUrl?: string;
+  challenge?: string;
+  solution?: string;
+  result?: string;
   rating?: number;
 };
 
@@ -33,9 +36,20 @@ export default function TestimonialsList({ items, carousel = true }: { items: Te
                 </div>
               </div>
               <div className="mt-4 space-y-2 text-neutral-700">
-                <p><span className="font-medium text-[#1E1E1E]">Challenge:</span> {t.challenge}</p>
-                <p><span className="font-medium text-[#1E1E1E]">Solution:</span> {t.solution}</p>
-                <p><span className="font-medium text-[#1E1E1E]">Result:</span> {t.result}</p>
+                {t.blurb ? (
+                  <>
+                    <p>{t.blurb}</p>
+                    {t.videoUrl && (
+                      <a href={t.videoUrl} target="_blank" rel="noreferrer" className="inline-block text-sm text-primary-600 hover:underline">Watch video →</a>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    <p><span className="font-medium text-[#1E1E1E]">Challenge:</span> {t.challenge}</p>
+                    <p><span className="font-medium text-[#1E1E1E]">Solution:</span> {t.solution}</p>
+                    <p><span className="font-medium text-[#1E1E1E]">Result:</span> {t.result}</p>
+                  </>
+                )}
               </div>
             </div>
           </Card>
@@ -77,9 +91,20 @@ export default function TestimonialsList({ items, carousel = true }: { items: Te
                   </div>
                 </div>
                 <div className="mt-4 space-y-2 text-neutral-700">
-                  <p><span className="font-medium text-[#1E1E1E]">Challenge:</span> {t.challenge}</p>
-                  <p><span className="font-medium text-[#1E1E1E]">Solution:</span> {t.solution}</p>
-                  <p><span className="font-medium text-[#1E1E1E]">Result:</span> {t.result}</p>
+                  {t.blurb ? (
+                    <>
+                      <p>{t.blurb}</p>
+                      {t.videoUrl && (
+                        <a href={t.videoUrl} target="_blank" rel="noreferrer" className="inline-block text-sm text-primary-600 hover:underline">Watch video →</a>
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      <p><span className="font-medium text-[#1E1E1E]">Challenge:</span> {t.challenge}</p>
+                      <p><span className="font-medium text-[#1E1E1E]">Solution:</span> {t.solution}</p>
+                      <p><span className="font-medium text-[#1E1E1E]">Result:</span> {t.result}</p>
+                    </>
+                  )}
                 </div>
               </div>
             </Card>

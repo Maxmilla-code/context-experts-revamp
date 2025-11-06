@@ -10,7 +10,7 @@ export default function ServiceCard({ title, description, icon }: { title: strin
         <h3 className="text-lg font-semibold text-neutral-900">{title}</h3>
         <p className="mt-2 text-neutral-600">{description}</p>
         <div className="mt-4">
-          <Button variant="ghost">Learn More →</Button>
+          <Button variant="ghost">view our packages →</Button>
         </div>
       </div>
     </Card>

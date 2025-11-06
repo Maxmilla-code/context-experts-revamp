@@ -53,18 +53,18 @@ export default function ContactForm() {
   return (
     <form onSubmit={onSubmit} className="space-y-4">
       <FormField label="Name" error={errors.name}>
-        <Input name="name" placeholder="Your name" />
+        <Input name="name" placeholder="Your name" className="focus:border-[#004AAD] focus:ring-[#93C5FD]/30" />
       </FormField>
       <FormField label="Email" error={errors.email}>
-        <Input type="email" name="email" placeholder="you@example.com" />
+        <Input type="email" name="email" placeholder="you@example.com" className="focus:border-[#004AAD] focus:ring-[#93C5FD]/30" />
       </FormField>
       <FormField label="Message" error={errors.message}>
-        <textarea name="message" className="w-full px-4 py-3 border-2 border-neutral-300 rounded-lg focus:border-primary-500 focus:ring-4 focus:ring-primary-100" rows={5} placeholder="Tell us about your project" />
+        <textarea name="message" className="w-full px-4 py-3 border-2 border-neutral-300 rounded-lg focus:border-[#004AAD] focus:ring-4 focus:ring-[#93C5FD]/30" rows={5} placeholder="Tell us about your project" />
       </FormField>
       <div className="flex items-center gap-4">
-        <Button type="submit" disabled={loading}>{loading ? 'Sending…' : 'Send Message'}</Button>
-        {errors.form && <p className="text-sm text-error">{errors.form}</p>}
-        {sent && <p className="text-sm text-success">Message sent!</p>}
+        <Button type="submit" className="bg-[#004AAD] hover:bg-[#003a84] focus:ring-[#93C5FD]/40" disabled={loading || sent}>{sent ? 'Sent Successfully' : (loading ? 'Sending…' : 'Send')}</Button>
+        {errors.form && <p className="text-sm text-red-600">{errors.form}</p>}
+        {sent && <p className="text-sm text-green-600">Message sent!</p>}
       </div>
       <div className="mt-3">
         <Button 
