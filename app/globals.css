@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand Palette */
+  --color-primary:   #1E3A8A; /* Deep Blue */
+  --color-secondary: #06B6D4; /* Bright Cyan */
+  --color-accent:    #FACC15; /* Warm Yellow */
+  --color-bg:        #F3F4F6; /* Soft Gray */
+  --color-text:      #111827; /* Charcoal */
+
+  /* Utility */
+  --overlay-light: rgba(255, 255, 255, 0.95);
+  --overlay-dark: rgba(17, 24, 39, 0.85);
+  --backdrop-blur: rgba(243, 244, 246, 0.8);
+}
+
+html { scroll-behavior: smooth; }
+
+body { @apply bg-background text-text antialiased; }
+
+.container-px { @apply px-4 sm:px-6 lg:px-8; }
